@@ -29,8 +29,10 @@ Thumbs.db
 *.swp
 
 
+
+
 specs/
 .specify/
 .claude/
-CLAUDE.md
 history/
+CLAUDE.md
