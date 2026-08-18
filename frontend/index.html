@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Audio Extractor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>YouTube Audio Extractor</h1>
+      <p id="usage-notice" class="notice">
+        Extract audio only from content you own or are authorized to use;
+        nothing is retained after delivery.
+      </p>
+    </header>
+
+    <form id="info-form">
+      <label for="url-input">YouTube URL</label>
+      <div class="input-row">
+        <input id="url-input" name="url" type="url" required
+               placeholder="https://www.youtube.com/watch?v=..."
+               autocomplete="off" spellcheck="false">
+        <button id="fetch-info" type="submit">Fetch info</button>
+      </div>
+    </form>
+
+    <div id="error-banner" class="error-banner" role="alert" hidden></div>
+    <p id="done-notice" class="done-notice" role="status" hidden></p>
+
+    <section id="metadata-card" class="card" hidden>
+      <img id="meta-thumbnail" alt="Video thumbnail">
+      <div class="card-body">
+        <h2 id="meta-title"></h2>
+        <p id="meta-channel"></p>
+        <p id="meta-duration"></p>
+      </div>
+    </section>
+
+    <section id="extract-panel" class="card" hidden>
+      <div class="card-body">
+        <label for="bitrate-select">MP3 bitrate</label>
+        <div class="input-row">
+          <select id="bitrate-select">
+            <option value="96">96 kbps</option>
+            <option value="128">128 kbps</option>
+            <option value="192" selected>192 kbps</option>
+            <option value="320">320 kbps</option>
+          </select>
+          <button id="start-extract" type="button">Extract MP3</button>
+        </div>
+        <p id="job-status" class="job-status" hidden></p>
+        <div id="progress-track" class="progress-track" hidden>
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <button id="download-file" type="button" hidden>Download MP3</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

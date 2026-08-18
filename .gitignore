@@ -1,0 +1,36 @@
+# Secrets / local config
+.env
+
+# Virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Work-dir artifacts (extraction temp files)
+work/
+*.mp3
+*.m4a
+*.webm
+*.part
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+
+specs/
+.specify/
+.claude/
+CLAUDE.md
+history/
